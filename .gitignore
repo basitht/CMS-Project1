@@ -22,7 +22,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-jam-env/
+cms-env/
 env/
 build/
 develop-eggs/

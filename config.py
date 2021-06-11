@@ -1,6 +1,8 @@
 import os
+import dotenv import load_dotenv
 
 basedir = os.path.abspath(os.path.dirname(__file__))
+load_dotenv(os.path.join(basedir, ".env"))
 
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-key'
@@ -22,7 +24,7 @@ class Config(object):
     CLIENT_SECRET = "ENTER_CLIENT_SECRET_HERE"
     # In your production app, Microsoft recommends you to use other ways to store your secret,
     # such as KeyVault, or environment variable as described in Flask's documentation here:
-    # https://flask.palletsprojects.com/en/1.1.x/config/#configuring-from-environment-variables
+    # https://flask.palletsprojects.com/en/1.1.x/config/#confi.'guring-from-environment-variables
     # CLIENT_SECRET = os.getenv("CLIENT_SECRET")
     # if not CLIENT_SECRET:
     #     raise ValueError("Need to define CLIENT_SECRET environment variable")
